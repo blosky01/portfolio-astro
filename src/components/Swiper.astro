@@ -1,0 +1,122 @@
+---
+import miami from '@assets/images/logos/miami.png';
+import orienta from '@assets/images/logos/orienta.png';
+import telrads from '@assets/images/logos/telrads.png'; 
+import origami from '@assets/images/logos/origami.png';
+import nimio from '@assets/images/logos/nimio.png';
+import transeron from '@assets/images/logos/transeron.png';
+import globalhomes from '@assets/images/logos/global-homes.png';
+import { Image } from '@astrojs/image/components';
+---
+
+<section
+	data-testid="hero"
+	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+>
+	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
+		<div>
+			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-4xl">
+				 <span class="text-blue">Algunos clientes y proyectos</span> con los que he trabajado
+			</h1>
+		</div>
+	</div>
+	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<Image
+						src={miami}
+						alt="logo-client"
+						aspectRatio="4:4"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<Image
+						src={orienta}
+						alt="logo-client"
+						aspectRatio="4:4"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<Image
+						src={globalhomes}
+						alt="logo-client"
+						aspectRatio="4:4"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<Image
+						src={nimio}
+						alt="logo-client"
+						aspectRatio="4:4"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<Image
+						src={origami}
+						alt="logo-client"
+						aspectRatio="1:1"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+
+				<div class="swiper-slide">
+					<Image
+						src={transeron}
+						alt="logo-client"
+						aspectRatio="80:8"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div>
+
+				<!-- <div class="swiper-slide">
+					<Image
+						src={telrads}
+						alt="logo-client"
+						aspectRatio="4:4"
+						format="png"
+						width={80}
+						height={80}
+						loading="eager"
+					/>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+	new Swiper('.swiper', {
+		slidesPerView: 3, // Cantidad de slides visibles
+		spaceBetween: 10, // Espacio entre slides
+		loop: true, // Bucle infinito
+		speed: 1000, // Velocidad de la transición (en milisegundos)
+		autoplay: {
+			delay: 1500, // Retardo entre slides (en milisegundos)
+		},
+	});
+</script>
